@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-public class MainActivity extends AppCompatActivity {
+public class SurfaceViewVideo extends AppCompatActivity {
     private SurfaceView mSurfaceView;
     private SurfaceHolder mSurfaceHolder;
     private MediaPlayer mediaPlayer;
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         mSurfaceHolder.addCallback(new SurfaceHolder.Callback() {
             @Override
             public void surfaceCreated(SurfaceHolder holder) {
-                mediaPlayer = MediaPlayer.create(MainActivity.this,R.raw.sexy_love);
+                mediaPlayer = MediaPlayer.create(SurfaceViewVideo.this,R.raw.sexy_love);
                 mediaPlayer.setDisplay(mSurfaceHolder);
                 mediaPlayer.start();
             }

@@ -40,7 +40,9 @@ public class NetVideo extends AppCompatActivity implements MediaPlayer.OnPrepare
                     e.printStackTrace();
                 }
                 mediaPlayer.setDisplay(mSurfaceHolder);
+                long aa = System.currentTimeMillis();
                 mediaPlayer.prepareAsync();
+                Log.i("bitch", System.currentTimeMillis()-aa+"");
             }
 
             @Override
@@ -56,9 +58,8 @@ public class NetVideo extends AppCompatActivity implements MediaPlayer.OnPrepare
     }
 
     @Override
-    public void onPrepared(MediaPlayer mp)
-    {
-        Log.i("bitch", "onPrepared");
+    public void onPrepared(MediaPlayer mp) {
         mediaPlayer.start();
+        Log.i("bitch", "onPrepared");
     }
 }
